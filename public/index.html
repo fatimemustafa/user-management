@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>👥 User Management System</h1>
+            <p>Add, Edit, Delete and Manage Users</p>
+        </header>
+
+        <section class="form-section">
+            <h2 id="form-title">Add New User</h2>
+            <form id="user-form">
+                <input type="hidden" id="user-id">
+                
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter user name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter user email">
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" min="0" placeholder="Enter user age">
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary" id="submit-btn">Add User</button>
+                    <button type="button" class="btn btn-secondary" id="cancel-btn" style="display: none;">Cancel</button>
+                </div>
+            </form>
+
+            <div id="message" class="message hidden"></div>
+        </section>
+
+        <section class="users-section">
+            <div class="section-header">
+                <h2>Users List</h2>
+                <button class="btn btn-refresh" id="refresh-btn">🔄 
+                    Refresh</button>
+            </div>
+            
+            <div id="loading" class="loading hidden">Loading users...</div>
+            <div id="users-container" class="users-grid"></div>
+            <div id="empty-state" class="empty-state hidden">
+                <p>No users found. Add your first user above!</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+

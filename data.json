@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": 2,
+      "name": "Profi Ardi",
+      "email": "ardiiii@example.com",
+      "age": 21
+    },
+    {
+      "id": 5,
+      "name": "fatime",
+      "email": "mustafafatime872@gmail.com",
+      "age": 18,
+      "createdAt": "2025-10-27T16:14:21.526Z"
+    }
+  ],
+  "nextId": 7
+}
